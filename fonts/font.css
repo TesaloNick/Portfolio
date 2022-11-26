@@ -1,0 +1,137 @@
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('segoeui/SegoeUI-Light.eot');
+	src: local('Segoe UI Light'), local('SegoeUI-Light'),
+		url('segoeui/SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
+		url('segoeui/SegoeUI-Light.woff') format('woff'),
+		url('segoeui/SegoeUI-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('segoeui/SegoeUI-SemiBold.eot');
+	src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+		url('segoeui/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('segoeui/SegoeUI-SemiBold.woff') format('woff'),
+		url('segoeui/SegoeUI-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('segoeui/SegoeUI.eot');
+	src: local('Segoe UI'), local('SegoeUI'),
+		url('segoeui/SegoeUI.eot?#iefix') format('embedded-opentype'),
+		url('segoeui/SegoeUI.woff') format('woff'),
+		url('segoeui/SegoeUI.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('segoeui/SegoeUI-Bold.eot');
+	src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
+		url('segoeui/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+		url('segoeui/SegoeUI-Bold.woff') format('woff'),
+		url('segoeui/SegoeUI-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'icons';
+  src:  url('icomoon/icons.eot?c9c1yi');
+  src:  url('icomoon/icons.eot?c9c1yi#iefix') format('embedded-opentype'),
+    url('icomoon/icons.ttf?c9c1yi') format('truetype'),
+    url('icomoon/icons.woff?c9c1yi') format('woff'),
+    url('icomoon/icons.svg?c9c1yi#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-javascript:before {
+  content: "\e900";
+}
+._icon-typescript:before {
+  content: "\e901";
+}
+._icon-jquery:before {
+  content: "\e902";
+}
+._icon-bootstrap:before {
+  content: "\e903";
+}
+._icon-npm:before {
+  content: "\e904";
+}
+._icon-git:before {
+  content: "\e905";
+}
+._icon-react:before {
+  content: "\e906";
+}
+._icon-linkedin:before {
+  content: "\e907";
+}
+._icon-telegram:before {
+  content: "\e908";
+}
+._icon-css:before {
+  content: "\e909";
+}
+._icon-scss:before {
+  content: "\e90a";
+}
+._icon-html:before {
+  content: "\e90b";
+}
+._icon-email:before {
+  content: "\e90c";
+}
+._icon-phone:before {
+  content: "\e90d";
+}
+._icon-location:before {
+  content: "\e90e";
+}
+._icon-github:before {
+  content: "\e90f";
+}
+._icon-whatsapp:before {
+  content: "\e910";
+}
+._icon-viber:before {
+  content: "\e911";
+}
+._icon-instagram:before {
+  content: "\e912";
+}
+._icon-facebook:before {
+  content: "\e913";
+}
+._icon-comment:before {
+  content: "\e915";
+}
+._icon-calendar:before {
+  content: "\e916";
+}

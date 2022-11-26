@@ -1,0 +1,145 @@
+@import url(./null.css);
+@import url(./burger-animation.css);
+@import url(../fonts/font.css);
+
+body {
+  color: rgba(255, 255, 255, 0.4);
+  background: #222;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @media (max-width: 1170px) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/background-main.png) center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 30px 0 0;
+
+    @media (max-width: 991px) {
+      padding: 0;
+      height: 50px;
+      position: fixed;
+      width: 100%;
+    }
+
+    & > .container {
+      height: 100%;
+      background-color: #fff;
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: 991px) {
+      display: block;
+      width: 50px;
+      height: 36px;
+      border-radius: 5px;
+      padding: 6px 10px;
+      border: 2px solid #808080;
+      cursor: pointer;
+      position: relative;
+      top: 7px;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 991px) {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      transition: 0.5s all ease-in-out;
+
+      &.open {
+        top: 100% !important;
+        transition: 0.5s all ease-in-out;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+      }
+
+      li {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+
+        @media (max-width: 991px) {
+          &:nth-of-type(1) {
+            a {
+              border-top: 2px solid #808080;
+            }
+          }
+        }
+
+        a {
+          color: #fff;
+          padding: 20px;
+
+          @media (max-width: 991px) {
+            display: block;
+            padding: 15px 10px;
+            color: #808080;
+            width: 100%;
+            border-bottom: 2px solid #808080;
+          }
+        }
+      }
+    }
+  }
+
+  & > .container {
+    height: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 70px;
+      font-weight: 200;
+      margin-bottom: 20px;
+    }
+    span {
+      display: block;
+      font-weight: 800;
+    }
+    p {
+      letter-spacing: 0.2rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
