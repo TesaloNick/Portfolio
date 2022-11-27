@@ -32,7 +32,7 @@
 }
 
 .home__burger_wrapper span:nth-child(3), .home__burger_wrapper span:nth-child(4) {
-  top: 15px;
+  top: 16px;
 }
 
 .home__burger_wrapper span:nth-child(5), .home__burger_wrapper span:nth-child(6) {
@@ -54,13 +54,13 @@
 }
 
 .home__burger_wrapper.open span:nth-child(1) {
-  right: calc(50% - 3px);
-  top: 9px;
+  right: calc(50% - 3.5px);
+  top: 10px;
 }
 
 .home__burger_wrapper.open span:nth-child(2) {
-  left: calc(50% - 3px);
-  top: 9px;
+  left: calc(50% - 3.5px);
+  top: 10px;
 }
 
 .home__burger_wrapper.open span:nth-child(3) {
@@ -74,11 +74,11 @@
 }
 
 .home__burger_wrapper.open span:nth-child(5) {
-  right: calc(50% - 3px);
-  bottom: 9px;
+  right: calc(50% - 3.5px);
+  bottom: 10px;
 }
 
 .home__burger_wrapper.open span:nth-child(6) {
-  left: calc(50% - 3px);
-  bottom: 9px;
+  left: calc(50% - 3.5px);
+  bottom: 10px;
 }

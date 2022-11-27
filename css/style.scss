@@ -2,9 +2,47 @@
 @import url(./burger-animation.css);
 @import url(../fonts/font.css);
 
+$color-background: #222222;
+$color-grey: #808080;
+$color-white: #ffffff;
+$color-salad: #57d131;
+$color-transparent: rgba(0, 0, 0, 0.5);
+$color-transparent-grey: rgba(255, 255, 255, 0.4);
+
+%title {
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 1.2;
+
+  span {
+    font-weight: 800;
+  }
+}
+
+%grey-text {
+  color: $color-grey;
+  line-height: 1.7;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+%button {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: $color-salad;
+  color: $color-white;
+  letter-spacing: 0.2rem;
+  border-radius: 1.6rem;
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-grey;
+    transition: 0.3s;
+  }
+}
+
+html,
 body {
-  color: rgba(255, 255, 255, 0.4);
-  background: #222;
   font-size: 16px;
   font-weight: 300;
 }
@@ -20,27 +58,43 @@ body {
 }
 
 .home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/background-main.png) center/cover no-repeat;
+  background: linear-gradient($color-transparent, $color-transparent),
+    url(../images/background-main.png) left/cover no-repeat, linear-gradient($color-background, $color-background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   &__header {
-    padding: 30px 0 0;
+    position: fixed;
+    width: 100%;
 
     @media (max-width: 991px) {
       padding: 0;
       height: 50px;
-      position: fixed;
       width: 100%;
     }
 
     & > .container {
       height: 100%;
-      background-color: #fff;
+      background-color: $color-white;
       z-index: 2;
       position: relative;
+    }
+
+    &.white {
+      background-color: $color-white;
+
+      ul {
+        li {
+          a {
+            color: rgba(0, 0, 0, 0.7);
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+      }
     }
   }
 
@@ -53,7 +107,7 @@ body {
       height: 36px;
       border-radius: 5px;
       padding: 6px 10px;
-      border: 2px solid #808080;
+      border: 1px solid $color-grey;
       cursor: pointer;
       position: relative;
       top: 7px;
@@ -65,8 +119,9 @@ body {
       position: absolute;
       left: 0;
       width: 100%;
-      background-color: #fff;
+      background-color: $color-white;
       transition: 0.5s all ease-in-out;
+      top: calc(-186px + 50px);
 
       &.open {
         top: 100% !important;
@@ -87,24 +142,22 @@ body {
         font-weight: 400;
         letter-spacing: 0.2em;
 
-        @media (max-width: 991px) {
-          &:nth-of-type(1) {
-            a {
-              border-top: 2px solid #808080;
-            }
-          }
-        }
-
         a {
           color: #fff;
-          padding: 20px;
+          padding: 25px 20px;
+          display: block;
+          transition: 0.3s;
+
+          &:hover {
+            color: $color-salad;
+            transition: 0.3s;
+          }
 
           @media (max-width: 991px) {
             display: block;
             padding: 15px 10px;
-            color: #808080;
+            color: $color-grey;
             width: 100%;
-            border-bottom: 2px solid #808080;
           }
         }
       }
@@ -122,6 +175,7 @@ body {
   &__text {
     display: flex;
     flex-direction: column;
+    gap: 1.25rem;
     align-items: center;
     justify-content: center;
     flex: 1 1 auto;
@@ -129,17 +183,73 @@ body {
     h1 {
       color: #fff;
       text-align: center;
-      font-size: 70px;
+      font-size: 4.3rem;
       font-weight: 200;
-      margin-bottom: 20px;
+      line-height: 1.2;
+
+      @media (max-width: 676px) {
+        font-size: 2.8rem;
+      }
     }
+
     span {
       display: block;
       font-weight: 800;
     }
+
     p {
+      font-size: 2.2rem;
       letter-spacing: 0.2rem;
-      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.2;
+      color: $color-transparent-grey;
+      text-align: center;
+
+      @media (max-width: 676px) {
+        font-size: 1.5rem;
+      }
     }
+
+    button {
+      @extend %button;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &__image {
+    background-color: $color-background;
+    border-radius: 5px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__text {
+    p {
+      @extend %grey-text;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__button {
+    @extend %button;
   }
 }
