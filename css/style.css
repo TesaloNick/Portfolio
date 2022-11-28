@@ -1,34 +1,71 @@
-@import url(./null.css);
-@import url(./burger-animation.css);
-@import url(../fonts/font.css);
-.about__title {
+@import url(./effects/null.css);
+@import url(./effects/burger-animation.css);
+@import url(./font.css);
+@import url(./effects/Paralax-hover-card-effect.css);
+.skills .title, .about .title {
   font-weight: 200;
   font-size: 2rem;
   line-height: 1.2;
 }
-.about__title span {
+.skills .title::before, .about .title::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #57d131;
+  display: block;
+  margin: 0 0 10px 0;
+}
+.skills .title span, .about .title span {
   font-weight: 800;
 }
 
-.about__text p {
+.skill__name, .about__text p {
   color: #808080;
   line-height: 1.7;
   font-size: 1rem;
   font-weight: 300;
 }
+@media (max-width: 767px) {
+  .skill__name, .about__text p {
+    font-size: 0.9rem;
+  }
+}
 
 .about__button, .home__text button {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   font-size: 1.2rem;
   background-color: #57d131;
+  border: 1px solid #57d131;
   color: #ffffff;
   letter-spacing: 0.2rem;
   border-radius: 1.6rem;
-  transition: 0.3s;
+  transition: 0.5s;
+}
+@media (max-width: 991px) {
+  .about__button, .home__text button {
+    padding: 0.5rem 0.75rem;
+  }
+}
+@media (max-width: 424px) {
+  .about__button, .home__text button {
+    font-size: 1rem;
+  }
 }
 .about__button:hover, .home__text button:hover {
-  color: #808080;
-  transition: 0.3s;
+  transition: 0.5s;
+  background-color: transparent;
+}
+
+.skills, .about {
+  padding: 3rem 0;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .skills, .about {
+    padding: 2rem 0;
+  }
 }
 
 html,
@@ -73,6 +110,7 @@ body {
 }
 .home__header.white {
   background-color: #ffffff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .home__header.white ul li a {
   color: rgba(0, 0, 0, 0.7);
@@ -104,6 +142,7 @@ body {
     background-color: #ffffff;
     transition: 0.5s all ease-in-out;
     top: -136px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   }
   .home__nav.open {
     top: 100% !important;
@@ -186,13 +225,31 @@ body {
   }
 }
 .about {
-  display: flex;
-  gap: 10px;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
 }
 .about__image {
   background-color: #222222;
-  border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .about__image {
+    margin: 0 1.25rem;
+  }
+}
+@media (max-width: 424px) {
+  .about__image {
+    margin: 0;
+  }
 }
 .about__image img {
   width: 100%;
@@ -200,9 +257,94 @@ body {
 .about__information {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
 .about__buttons {
   display: flex;
-  gap: 15px;
+  gap: 0.5rem;
+}
+@media (max-width: 424px) {
+  .about__buttons {
+    gap: 0.3rem;
+  }
+}
+.about__button:hover {
+  color: #808080;
+}
+.about__button.button-cv {
+  background-color: #808080;
+  border-color: #808080;
+}
+.about__button.button-cv:hover {
+  color: #808080;
+  background-color: transparent;
+}
+
+.skills {
+  grid-template-columns: 3fr 1fr;
+}
+.skills__title {
+  justify-self: center;
+}
+.skills .title {
+  justify-self: center;
+}
+.skills__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill__up {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.skill__icon {
+  color: #57d131;
+  display: flex;
+  gap: 5px;
+}
+.skill__down {
+  position: relative;
+}
+.skill__progress-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #808080;
+}
+.skill__progress-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #57d131;
+}
+.skill__marker {
+  position: absolute;
+  width: 1.5rem;
+  height: 1rem;
+  margin: 10px 0 0;
+  border-radius: 3px;
+  transform: translateX(-50%);
+  background-color: #57d131;
+  color: #ffffff;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill__marker::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #57d131;
 }

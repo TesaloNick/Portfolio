@@ -1,0 +1,52 @@
+.card {
+  width: min(30rem, 100%);
+}
+
+.card-1 {
+  --bg-image: url(../../images/about.png);
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  min-height: 16rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  color: white;
+  --bg-overlay: rgb(0 0 0 / 0.5);
+}
+
+.phce {
+  perspective: 1000px;
+  position: relative;
+}
+.phce .content {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+.phce .content::before, .phce .content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform-style: preserve-3d;
+}
+.phce .content::before {
+  background-image: var(--bg-image);
+  background-size: cover;
+}
+.phce .content::after {
+  background: var(--bg-overlay, none);
+}
+.phce:hover > .content::before {
+  transform: scale(1.33) translateX(calc(-12.5% * var(--posX, 0))) translateY(calc(-12.5% * var(--posY, 0)));
+}
+.phce:hover > .content {
+  transform: rotateX(calc(22.5deg * var(--posY, 0))) rotateY(calc(-22.5deg * var(--posX, 0)));
+}
+.phce:not(:hover) > .content, .phce:not(:hover) > .content::before {
+  transition: transform var(--transition-duration, 500ms) var(--transition-timing-function, linear);
+}

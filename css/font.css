@@ -1,54 +1,54 @@
 @font-face {
 	font-family: 'Segoe UI';
-	src: url('segoeui/SegoeUI-Light.eot');
+	src: url('../fonts/segoeui/SegoeUI-Light.eot');
 	src: local('Segoe UI Light'), local('SegoeUI-Light'),
-		url('segoeui/SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
-		url('segoeui/SegoeUI-Light.woff') format('woff'),
-		url('segoeui/SegoeUI-Light.ttf') format('truetype');
+		url('../fonts/segoeui/SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/segoeui/SegoeUI-Light.woff') format('woff'),
+		url('../fonts/segoeui/SegoeUI-Light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Segoe UI';
-	src: url('segoeui/SegoeUI-SemiBold.eot');
+	src: url('../fonts/segoeui/SegoeUI-SemiBold.eot');
 	src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
-		url('segoeui/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-		url('segoeui/SegoeUI-SemiBold.woff') format('woff'),
-		url('segoeui/SegoeUI-SemiBold.ttf') format('truetype');
+		url('../fonts/segoeui/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/segoeui/SegoeUI-SemiBold.woff') format('woff'),
+		url('../fonts/segoeui/SegoeUI-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Segoe UI';
-	src: url('segoeui/SegoeUI.eot');
+	src: url('../fonts/segoeui/SegoeUI.eot');
 	src: local('Segoe UI'), local('SegoeUI'),
-		url('segoeui/SegoeUI.eot?#iefix') format('embedded-opentype'),
-		url('segoeui/SegoeUI.woff') format('woff'),
-		url('segoeui/SegoeUI.ttf') format('truetype');
+		url('../fonts/segoeui/SegoeUI.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/segoeui/SegoeUI.woff') format('woff'),
+		url('../fonts/segoeui/SegoeUI.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Segoe UI';
-	src: url('segoeui/SegoeUI-Bold.eot');
+	src: url('../fonts/segoeui/SegoeUI-Bold.eot');
 	src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
-		url('segoeui/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
-		url('segoeui/SegoeUI-Bold.woff') format('woff'),
-		url('segoeui/SegoeUI-Bold.ttf') format('truetype');
+		url('../fonts/segoeui/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/segoeui/SegoeUI-Bold.woff') format('woff'),
+		url('../fonts/segoeui/SegoeUI-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
   font-family: 'icons';
-  src:  url('icomoon/icons.eot?c9c1yi');
-  src:  url('icomoon/icons.eot?c9c1yi#iefix') format('embedded-opentype'),
-    url('icomoon/icons.ttf?c9c1yi') format('truetype'),
-    url('icomoon/icons.woff?c9c1yi') format('woff'),
-    url('icomoon/icons.svg?c9c1yi#icons') format('svg');
+  src:  url('../fonts/icomoon/icons.eot?c9c1yi');
+  src:  url('../fonts/icomoon/icons.eot?c9c1yi#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icons.ttf?c9c1yi') format('truetype'),
+    url('../fonts/icomoon/icons.woff?c9c1yi') format('woff'),
+    url('../fonts/icomoon/icons.svg?c9c1yi#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -69,6 +69,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+._icon-redux:before {
+  content: "\e903";
+}
 ._icon-javascript:before {
   content: "\e900";
 }
@@ -77,9 +80,6 @@
 }
 ._icon-jquery:before {
   content: "\e902";
-}
-._icon-bootstrap:before {
-  content: "\e903";
 }
 ._icon-npm:before {
   content: "\e904";

@@ -1,6 +1,7 @@
-@import url(./null.css);
-@import url(./burger-animation.css);
-@import url(../fonts/font.css);
+@import url(./effects/null.css);
+@import url(./effects/burger-animation.css);
+@import url(./font.css);
+@import url(./effects/Paralax-hover-card-effect.css);
 
 $color-background: #222222;
 $color-grey: #808080;
@@ -14,6 +15,15 @@ $color-transparent-grey: rgba(255, 255, 255, 0.4);
   font-size: 2rem;
   line-height: 1.2;
 
+  &::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: $color-salad;
+    display: block;
+    margin: 0 0 10px 0;
+  }
+
   span {
     font-weight: 800;
   }
@@ -24,20 +34,48 @@ $color-transparent-grey: rgba(255, 255, 255, 0.4);
   line-height: 1.7;
   font-size: 1rem;
   font-weight: 300;
+
+  @media (max-width: 767px) {
+    font-size: 0.9rem;
+  }
 }
 
 %button {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   font-size: 1.2rem;
   background-color: $color-salad;
+  border: 1px solid $color-salad;
   color: $color-white;
   letter-spacing: 0.2rem;
   border-radius: 1.6rem;
-  transition: 0.3s;
+  transition: 0.5s;
+
+  @media (max-width: 991px) {
+    padding: 0.5rem 0.75rem;
+  }
+
+  @media (max-width: 424px) {
+    font-size: 1rem;
+  }
 
   &:hover {
-    color: $color-grey;
-    transition: 0.3s;
+    transition: 0.5s;
+    background-color: transparent;
+  }
+}
+
+%section {
+  padding: 3rem 0;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+
+  .title {
+    @extend %title;
+  }
+
+  @media (max-width: 767px) {
+    padding: 2rem 0;
   }
 }
 
@@ -83,6 +121,7 @@ body {
 
     &.white {
       background-color: $color-white;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
       ul {
         li {
@@ -122,6 +161,7 @@ body {
       background-color: $color-white;
       transition: 0.5s all ease-in-out;
       top: calc(-186px + 50px);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
       &.open {
         top: 100% !important;
@@ -216,13 +256,29 @@ body {
 }
 
 .about {
-  display: flex;
-  gap: 10px;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
+  @extend %section;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 
   &__image {
     background-color: $color-background;
-    border-radius: 5px;
+
+    @media (max-width: 767px) {
+      margin: 0 1.25rem;
+    }
+
+    @media (max-width: 424px) {
+      margin: 0;
+    }
+
     img {
       width: 100%;
     }
@@ -231,12 +287,12 @@ body {
   &__information {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
   }
 
-  &__title {
-    @extend %title;
-  }
+  // &__title {
+  //   @extend %title;
+  // }
 
   &__text {
     p {
@@ -246,10 +302,112 @@ body {
 
   &__buttons {
     display: flex;
-    gap: 15px;
+    gap: 0.5rem;
+
+    @media (max-width: 424px) {
+      gap: 0.3rem;
+    }
   }
 
   &__button {
     @extend %button;
+
+    &:hover {
+      color: $color-grey;
+    }
+
+    &.button-cv {
+      background-color: $color-grey;
+      border-color: $color-grey;
+
+      &:hover {
+        color: $color-grey;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.skills {
+  @extend %section;
+  grid-template-columns: 3fr 1fr;
+
+  &__title {
+    justify-self: center;
+  }
+
+  .title {
+    justify-self: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.skill {
+  &__up {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon {
+    color: $color-salad;
+    display: flex;
+    gap: 5px;
+  }
+
+  &__name {
+    @extend %grey-text;
+  }
+
+  &__down {
+    position: relative;
+  }
+
+  &__progress-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 1px;
+    background-color: $color-grey;
+  }
+
+  &__progress-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    border-radius: 1px;
+    background-color: $color-salad;
+  }
+
+  &__marker {
+    position: absolute;
+    width: 1.5rem;
+    height: 1rem;
+    margin: 10px 0 0;
+    border-radius: 3px;
+    transform: translateX(-50%);
+    background-color: $color-salad;
+    color: $color-white;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 1rem;
+      border: 5px solid transparent;
+      border-bottom: 5px solid $color-salad;
+    }
   }
 }

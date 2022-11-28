@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antonovich</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <script defer src="./js/app.js"></script>
 </head>
 
@@ -39,15 +39,21 @@
       <div class="home__text">
         <h1>Hello, I'm<span>Nikolay Antonovich</span></h1>
         <p>FRONTEND DEVELOPER</p>
-        <button>More about me</button>
+        <button>MORE ABOUT ME</button>
       </div>
     </div>
   </section>
   <div class="container">
     <section class="about">
-      <div class="about__image"><img src="./images/about.png" alt="about"></div>
+      <div class="about__image">
+        <!-- <div class="phce card"> -->
+        <!-- <div class="content"> -->
+        <img src="./images/about.png" alt="about">
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
       <div class="about__information">
-        <h1 class="about__title">About <span>Me</span></h1>
+        <h1 class="title">About <span>Me</span></h1>
         <div class="about__text">
           <p>I am a result-oriented front-end developer with experience in creating Landing pages and SPA using React,
             Redux (Toolkit) HTML5, CSS3.</p>
@@ -61,9 +67,82 @@
             with your head!</p>
         </div>
         <div class="about__buttons">
-          <button class="about__button">HIRE ME</button>
-          <button class="about__button">DOWNLOAD CV</button>
+          <button class="about__button button-hire">HIRE ME</button>
+          <button class="about__button button-cv">DOWNLOAD CV</button>
         </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="skills__wrapper">
+        <div class="skill">
+          <div class="skill__up">
+            <div class="skill__icon">
+              <div class="_icon-html"></div>
+            </div>
+            <p class="skill__name">HTML5</p>
+          </div>
+          <div class="skill__down">
+            <div class="skill__progress-full"></div>
+            <div class="skill__progress-active"></div>
+            <div class="skill__marker" data-progress="95%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill__up">
+            <div class="skill__icon">
+              <div class="_icon-css"></div>
+              <div class="_icon-scss"></div>
+            </div>
+            <p class="skill__name">CSS, SCSS</p>
+          </div>
+          <div class="skill__down">
+            <div class="skill__progress-full"></div>
+            <div class="skill__progress-active"></div>
+            <div class="skill__marker" data-progress="95%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill__up">
+            <div class="skill__icon">
+              <div class="_icon-javascript"></div>
+            </div>
+            <p class="skill__name">JavaScript</p>
+          </div>
+          <div class="skill__down">
+            <div class="skill__progress-full"></div>
+            <div class="skill__progress-active"></div>
+            <div class="skill__marker" data-progress="95%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill__up">
+            <div class="skill__icon">
+              <div class="_icon-react"></div>
+            </div>
+            <p class="skill__name">React, React Hooks</p>
+          </div>
+          <div class="skill__down">
+            <div class="skill__progress-full"></div>
+            <div class="skill__progress-active"></div>
+            <div class="skill__marker" data-progress="85%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill__up">
+            <div class="skill__icon">
+              <div class="_icon-redux"></div>
+            </div>
+            <p class="skill__name">Redux, Redux Toolkit</p>
+          </div>
+          <div class="skill__down">
+            <div class="skill__progress-full"></div>
+            <div class="skill__progress-active"></div>
+            <div class="skill__marker" data-progress="75%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skills__title">
+        <h1 class="title">My <span>Skills</span></h1>
       </div>
     </section>
   </div>
