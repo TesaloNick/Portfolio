@@ -67,7 +67,6 @@ $color-transparent-grey: rgba(255, 255, 255, 0.4);
 %section {
   padding: 3rem 0;
   display: grid;
-  grid-auto-flow: column;
   gap: 1rem;
 
   .title {
@@ -115,13 +114,14 @@ body {
     & > .container {
       height: 100%;
       background-color: $color-white;
-      z-index: 2;
+      z-index: 5;
       position: relative;
     }
 
     &.white {
       background-color: $color-white;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      z-index: 5;
 
       ul {
         li {
@@ -332,8 +332,17 @@ body {
   @extend %section;
   grid-template-columns: 3fr 1fr;
 
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
   &__title {
     justify-self: center;
+
+    @media (max-width: 767px) {
+      grid-row: 1/2;
+      justify-self: left;
+    }
   }
 
   .title {
@@ -346,6 +355,7 @@ body {
     gap: 20px;
   }
 }
+
 .skill {
   &__up {
     display: flex;
@@ -409,5 +419,111 @@ body {
       border: 5px solid transparent;
       border-bottom: 5px solid $color-salad;
     }
+  }
+}
+
+.portfolio {
+  @extend %section;
+
+  &__slider {
+    min-width: 100%;
+
+    .slick-list {
+      .slick-track {
+        display: flex; // выравнивание высоты слайдов
+
+        .slick-slide {
+          padding: 0 10px;
+          height: auto; // выравнивание высоты слайдов
+        }
+      }
+    }
+
+    .slick-arrow {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+
+      &.prev {
+        ._icon-arrow {
+          height: 100%;
+          font-size: 30px;
+          color: $color-white;
+          position: relative;
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      &.next {
+        ._icon-arrow {
+          height: 100%;
+          font-size: 30px;
+          color: $color-white;
+          position: relative;
+          transform: rotate(180deg);
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .slick-dots {
+      li {
+        button {
+          &::before {
+          }
+        }
+      }
+
+      .slick-active {
+        button {
+          &::before {
+          }
+        }
+      }
+    }
+  }
+}
+
+.slide {
+  &__image {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+    &_description {
+      position: absolute;
+      @extend %grey-text;
+    }
+
+    &_github {
+    }
+  }
+
+  &__text {
+  }
+
+  &__title {
+  }
+
+  &__description {
+    @extend %grey-text;
+  }
+
+  &__stack {
+  }
+
+  &__about {
   }
 }

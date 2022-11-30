@@ -69,6 +69,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+._icon-arrow:before {
+  content: "\e914";
+}
 ._icon-redux:before {
   content: "\e903";
 }
