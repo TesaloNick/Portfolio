@@ -2,20 +2,20 @@
 @import url(./effects/burger-animation.css);
 @import url(./font.css);
 @import url(./effects/Paralax-hover-card-effect.css);
-.portfolio .title, .skills .title, .about .title {
+.form .title, .portfolio .title, .skills .container .title, .about .title {
   font-weight: 200;
   font-size: 2rem;
   line-height: 1.2;
 }
-.portfolio .title::before, .skills .title::before, .about .title::before {
+.form .title::before, .portfolio .title::before, .skills .container .title::before, .about .title::before {
   content: "";
   width: 50px;
   height: 2px;
-  background-color: #57d131;
+  background-color: #fab95b;
   display: block;
   margin: 0 0 10px 0;
 }
-.portfolio .title span, .skills .title span, .about .title span {
+.form .title span, .portfolio .title span, .skills .container .title span, .about .title span {
   font-weight: 800;
 }
 
@@ -34,8 +34,8 @@
 .about__button, .home__text button {
   padding: 0.75rem 1rem;
   font-size: 1.2rem;
-  background-color: #57d131;
-  border: 1px solid #57d131;
+  background-color: #fab95b;
+  border: 1px solid #fab95b;
   color: #ffffff;
   letter-spacing: 0.2rem;
   border-radius: 1.6rem;
@@ -56,19 +56,20 @@
   background-color: transparent;
 }
 
-.portfolio, .skills, .about {
+.form, .portfolio, .skills .container, .about {
   padding: 3rem 0;
   display: grid;
   gap: 1rem;
 }
 @media (max-width: 767px) {
-  .portfolio, .skills, .about {
-    padding: 2rem 0;
+  .form, .portfolio, .skills .container, .about {
+    padding: 1.5rem 0;
   }
 }
 
 html,
 body {
+  font-family: "Segoe UI";
   font-size: 16px;
   font-weight: 300;
 }
@@ -170,7 +171,7 @@ body {
   transition: 0.3s;
 }
 .home__nav ul li a:hover {
-  color: #57d131;
+  color: #fab95b;
   transition: 0.3s;
 }
 @media (max-width: 991px) {
@@ -238,9 +239,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
-.about__image {
-  background-color: #222222;
-}
 @media (max-width: 767px) {
   .about__image {
     margin: 0 1.25rem;
@@ -281,24 +279,33 @@ body {
 }
 
 .skills {
+  background-color: #fab95b;
+}
+.skills .container {
   grid-template-columns: 3fr 1fr;
 }
-@media (max-width: 767px) {
-  .skills {
-    grid-template-columns: 1fr;
+@media (max-width: 1230px) {
+  .skills .container {
+    padding: 2rem 15px;
   }
 }
-.skills__title {
-  justify-self: center;
-}
 @media (max-width: 767px) {
-  .skills__title {
-    grid-row: 1/2;
-    justify-self: left;
+  .skills .container {
+    grid-template-columns: 1fr;
   }
 }
 .skills .title {
   justify-self: center;
+  color: #ffffff;
+}
+.skills .title::before {
+  background-color: #ffffff !important;
+}
+@media (max-width: 767px) {
+  .skills .title {
+    grid-row: 1/2;
+    justify-self: left;
+  }
 }
 .skills__wrapper {
   display: flex;
@@ -312,9 +319,12 @@ body {
   gap: 10px;
 }
 .skill__icon {
-  color: #57d131;
+  color: #ffffff;
   display: flex;
   gap: 5px;
+}
+.skill__name {
+  color: #ffffff;
 }
 .skill__down {
   position: relative;
@@ -334,7 +344,7 @@ body {
   left: 0;
   height: 3px;
   border-radius: 1px;
-  background-color: #57d131;
+  background-color: #ffffff;
 }
 .skill__marker {
   position: absolute;
@@ -343,8 +353,8 @@ body {
   margin: 10px 0 0;
   border-radius: 3px;
   transform: translateX(-50%);
-  background-color: #57d131;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #fab95b;
   font-size: 0.6rem;
   display: flex;
   justify-content: center;
@@ -357,11 +367,15 @@ body {
   transform: translateX(-50%);
   bottom: 1rem;
   border: 5px solid transparent;
-  border-bottom: 5px solid #57d131;
+  border-bottom: 5px solid #ffffff;
 }
 
+.portfolio .container {
+  width: 100%;
+}
 .portfolio__slider {
   min-width: 100%;
+  position: relative;
 }
 .portfolio__slider .slick-list .slick-track {
   display: flex;
@@ -373,40 +387,224 @@ body {
 .portfolio__slider .slick-arrow {
   width: 50px;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
   cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 125px;
 }
-.portfolio__slider .slick-arrow.prev ._icon-arrow {
+@media (max-width: 767px) {
+  .portfolio__slider .slick-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .portfolio__slider .slick-arrow {
+    top: 100px;
+  }
+}
+.portfolio__slider .slick-arrow ._icon-arrow {
   height: 100%;
   font-size: 30px;
   color: #ffffff;
   position: relative;
 }
-.portfolio__slider .slick-arrow.prev ._icon-arrow::before {
+.portfolio__slider .slick-arrow ._icon-arrow::before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.portfolio__slider .slick-arrow:hover {
+  background-color: rgba(90, 90, 90, 0.8);
+  transition: 0.5s;
+}
+.portfolio__slider .slick-arrow.prev {
+  left: 10px;
+}
+.portfolio__slider .slick-arrow.next {
+  right: 10px;
 }
 .portfolio__slider .slick-arrow.next ._icon-arrow {
-  height: 100%;
-  font-size: 30px;
-  color: #ffffff;
-  position: relative;
   transform: rotate(180deg);
-}
-.portfolio__slider .slick-arrow.next ._icon-arrow::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .slide__image {
   position: relative;
+  margin-bottom: 10px;
+}
+@media (max-width: 1230px) {
+  .slide__image .slide__image_description {
+    visibility: visible;
+  }
+  .slide__image .slide__image_github {
+    transform: rotate(720deg) scale(1);
+    transition: 1s ease;
+  }
+}
+.slide__image:hover .slide__image_description {
+  visibility: visible;
+}
+.slide__image:hover .slide__image_github {
+  transform: rotate(720deg) scale(1);
+  transition: 1s ease;
 }
 .slide__image img {
   width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+@media (max-width: 500px) {
+  .slide__image img {
+    height: 250px;
+  }
 }
 .slide__image_description {
   position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 1230px) {
+  .slide__image_description {
+    height: 70px;
+    bottom: 0;
+    top: auto;
+  }
+}
+.slide__image_description ._icon-show {
+  font-size: 30px;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #fab95b;
+  gap: 10px;
+  font-size: 40px;
+  line-height: 1.2;
+}
+@media (max-width: 1230px) {
+  .slide__image_description ._icon-show {
+    font-size: 30px;
+  }
+}
+.slide__image_github {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #fab95b;
+  gap: 10px;
+  font-size: 40px;
+  line-height: 1.2;
+  transform: rotate(0deg) scale(0.1);
+}
+@media (max-width: 1230px) {
+  .slide__image_github {
+    font-size: 30px;
+  }
+}
+.slide__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.slide__title {
+  font-size: 24px;
+  color: #808080;
+}
+.slide__description {
+  line-height: 1.2;
+}
+.slide__stack {
+  margin-bottom: 5px;
+}
+.slide__stack span {
+  font-weight: 700;
+}
+.slide__about span {
+  font-weight: 700;
+}
+
+.form {
+  background-color: #fab95b;
+}
+.form .container {
+  width: 100%;
+}
+.form .title {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.form .title::before {
+  background-color: #ffffff !important;
+}
+.form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 500px) {
+  .form form {
+    grid-template-columns: 1fr;
+  }
+}
+.form input,
+.form textarea {
+  background-color: #fab95b;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255);
+  caret-color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  padding: 6px 12px;
+}
+.form input::-moz-placeholder, .form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.form input:focus,
+.form textarea:focus {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.form__input-topic {
+  grid-column: 1/3;
+}
+@media (max-width: 500px) {
+  .form__input-topic {
+    grid-column: 1/2;
+  }
+}
+.form__message {
+  grid-column: 1/3;
+  resize: vertical;
+  max-height: 300px;
+}
+@media (max-width: 500px) {
+  .form__message {
+    grid-column: 1/2;
+  }
+}
+.form__button {
+  justify-self: left;
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
+  border-radius: 30px;
+  padding: 10px 30px;
 }

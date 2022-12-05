@@ -53,6 +53,8 @@ $('.portfolio__slider').slick({
   swipeToSlide: true,
   prevArrow: "<div class='prev'><div class='_icon-arrow'></div></div>",
   nextArrow: "<div class='next'><div class='_icon-arrow'></div></div>",
+  // autoplay: true,
+  // autoplaySpeed: 5000,
   responsive: [
     {
       breakpoint: 1000,

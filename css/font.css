@@ -70,6 +70,12 @@
 }
 
 
+._icon-show:before {
+  content: "\e918";
+}
+._icon-download:before {
+  content: "\e917";
+}
 ._icon-arrow:before {
   content: "\e914";
 }

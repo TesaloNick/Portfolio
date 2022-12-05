@@ -75,7 +75,10 @@
         </div>
       </div>
     </section>
-    <section class="skills">
+  </div>
+
+  <section class="skills">
+    <div class="container">
       <div class="skills__wrapper">
         <div class="skill">
           <div class="skill__up">
@@ -144,16 +147,13 @@
           </div>
         </div>
       </div>
-      <div class="skills__title">
-        <h1 class="title">My <span>Skills</span></h1>
-      </div>
-    </section>
-  </div>
+      <h1 class="title">My <span>Skills</span></h1>
+    </div>
+  </section>
+
   <section class="portfolio">
     <div class="container">
-      <div class="title">
-        <h1><span>Portfolio</span></h1>
-      </div>
+      <h1 class="title"><span>Portfolio</span></h1>
     </div>
     <div class="portfolio__slider">
       <div class="slide">
@@ -161,14 +161,18 @@
           <img src="https://github.com/TesaloNick/NBA-stat/blob/master/public/images/CoverHome.png?raw=true"
             alt="CoverHome">
           <div class="slide__image_description">
-            <a href="https://github.com/TesaloNick/NBA-stat" class="slide__image_github"></a>
+            <a href="https://nba-stat.vercel.app/" class="_icon-show" target="_blank"></a>
+            <a href="https://github.com/TesaloNick/NBA-stat" class=" slide__image_github" target="_blank">
+              <div class="_icon-github"></div>GitHub
+            </a>
           </div>
         </div>
         <div class="slide__text">
           <h2 class="slide__title">NBA Stats</h2>
           <div class="slide__description">
-            <p class="slide__stack">Stack: React, React Hooks, Redux, Redux Toolkit, axios, SCSS</p>
-            <p class="slide__about">Description: Site for online monitoring of results and collection of NBA
+            <p class="slide__stack"><span>Stack:</span> React, React Hooks, Redux, Redux Toolkit, axios, SCSS</p>
+            <p class="slide__about"><span>Description:</span> Site for online monitoring of results and collection of
+              NBA
               basketball league
               statistics</p>
           </div>
@@ -178,14 +182,17 @@
         <div class="slide__image">
           <img src="https://github.com/TesaloNick/grizzlies-store/raw/master/public/images/face-of-site.png" alt="">
           <div class="slide__image_description">
-            <a href="https://github.com/TesaloNick/grizzlies-store" class="slide__image_github"></a>
+            <a href="https://grizzlies-store.vercel.app/" class="_icon-show" target="_blank"></a>
+            <a href="https://github.com/TesaloNick/grizzlies-store" class=" slide__image_github" target="_blank">
+              <div class="_icon-github"></div>GitHub
+            </a>
           </div>
         </div>
         <div class="slide__text">
           <h2 class="slide__title">Grizzlies-Store</h2>
           <div class="slide__description">
-            <p class="slide__stack">Stack: React, React Hooks, Context</p>
-            <p class="slide__about">Description: Online sportswear store for the Memphis Grizzlies team</p>
+            <p class="slide__stack"><span>Stack:</span> React, React Hooks, Context</p>
+            <p class="slide__about"><span>Description:</span> Online sportswear store for the Memphis Grizzlies team</p>
           </div>
         </div>
       </div>
@@ -193,14 +200,17 @@
         <div class="slide__image">
           <img src="https://github.com/TesaloNick/IPhub-medium/blob/master/img/CoverHome.png?raw=true" alt="CoverHome">
           <div class="slide__image_description">
-            <a href="https://github.com/TesaloNick/IPhub-medium" class="slide__image_github"></a>
+            <a href="https://tesalonick.github.io/IPhub-medium/" class="_icon-show" target="_blank"></a>
+            <a href="https://github.com/TesaloNick/IPhub-medium" class=" slide__image_github" target="_blank">
+              <div class="_icon-github"></div>GitHub
+            </a>
           </div>
         </div>
         <div class="slide__text">
           <h2 class="slide__title">IPHub</h2>
           <div class="slide__description">
-            <p class="slide__stack">Stack: HTML, SCSS, JavaScript, jQuery</p>
-            <p class="slide__about">Description: Layout of site about intellectual property</p>
+            <p class="slide__stack"><span>Stack:</span> HTML, SCSS, JavaScript, jQuery</p>
+            <p class="slide__about"><span>Description:</span> Layout of site about intellectual property</p>
           </div>
         </div>
       </div>
@@ -208,20 +218,47 @@
         <div class="slide__image">
           <img src="https://github.com/TesaloNick/ToDo-List/raw/master/img/CoverHome.png" alt="CoverHome">
           <div class="slide__image_description">
-            <a href="https://github.com/TesaloNick/ToDo-List" class="slide__image_github"></a>
+            <a href="https://tesalonick.github.io/ToDo-List/" class="_icon-show" target="_blank"></a>
+            <a href="https://github.com/TesaloNick/ToDo-List" class=" slide__image_github" target="_blank">
+              <div class="_icon-github"></div>GitHub
+            </a>
           </div>
         </div>
         <div class="slide__text">
           <h2 class="slide__title">ToDo-list</h2>
           <div class="slide__description">
-            <p class="slide__stack">Stack: HTML, SCSS, JavaScript, Bootstrap</p>
-            <p class="slide__about">Description: Just ToDo-list :)</p>
+            <p class="slide__stack"><span>Stack:</span> HTML, SCSS, JavaScript, Bootstrap</p>
+            <p class="slide__about"><span>Description:</span> Just ToDo-list :)</p>
           </div>
         </div>
         <!-- </div> -->
       </div>
     </div>
   </section>
+  <section class="form">
+    <div class="container">
+      <h1 class="title">Wanna <span>Start Work</span> With Me?</h1>
+      <form action="">
+        <input type="text" class="form__input-name" required placeholder="Your name">
+        <input type="email" class="form__input-email" required placeholder="Your email">
+        <input type="text" class="form__input-topic" placeholder="Subject of you message">
+        <textarea name="" id="" cols="20" rows="10" class="form__message" placeholder="Write a message"></textarea>
+        <button class="form__button">SEND MESSAGE</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- <div class="contacts">
+    <h2 class="contacts__title">My Contact Details</h2>
+    <div class="contacts__block">
+      <h3>Email</h3>
+      <a href="mailto:TesaloNick@gmail.com">TesaloNick@gmail.com</a>
+    </div>
+    <div class="contacts__block">
+      <h3>Phone</h3>
+      <a href="tel:375447084805">+375 (44) 708-48-05</a>
+    </div>
+  </div> -->
 
   <script src="./js/jquery-3.6.1.min.js"></script>
   <script type="text/javascript" src="./js/slick-slider/slick.min.js"></script>
