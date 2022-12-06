@@ -239,6 +239,12 @@ body {
     span {
       display: block;
       font-weight: 800;
+      width: 18ch;
+      animation: typing 3s steps(18), blink 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: monospace;
     }
 
     p {
@@ -257,6 +263,18 @@ body {
       @extend %button;
       font-weight: 200;
     }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 

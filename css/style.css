@@ -213,6 +213,13 @@ body {
 .home__text span {
   display: block;
   font-weight: 800;
+  width: 18ch;
+  -webkit-animation: typing 3s steps(18), blink 0.5s step-end infinite alternate;
+          animation: typing 3s steps(18), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
 }
 .home__text p {
   font-size: 2.2rem;
@@ -230,6 +237,27 @@ body {
   font-weight: 200;
 }
 
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 .about {
   grid-template-columns: 1fr 2fr;
   align-items: center;

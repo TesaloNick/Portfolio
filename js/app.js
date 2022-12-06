@@ -53,8 +53,6 @@ $('.portfolio__slider').slick({
   swipeToSlide: true,
   prevArrow: "<div class='prev'><div class='_icon-arrow'></div></div>",
   nextArrow: "<div class='next'><div class='_icon-arrow'></div></div>",
-  // autoplay: true,
-  // autoplaySpeed: 5000,
   responsive: [
     {
       breakpoint: 1000,
@@ -128,23 +126,3 @@ function slowScroll(id) {
   return false;
 }
 
-//------------------------------send email-------------------------
-// $(document).ready(function () {
-//   //E-mail Ajax Send
-//   $(".form form").submit(function () { //Change
-//     var th = $(this);
-//     $.ajax({
-//       type: "POST",
-//       url: "./mail.php", //Change
-//       data: th.serialize()
-//     }).done(function () {
-//       alert("Thank you!");
-//       setTimeout(function () {
-//         // Done Functions
-//         th.trigger("reset");
-//       }, 1000);
-//     });
-//     return false;
-//   });
-
-// });
