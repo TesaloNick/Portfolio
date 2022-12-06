@@ -5,8 +5,10 @@
 
 $color-background: #222222;
 $color-grey: #808080;
+$color-grey-hover: #575757;
 $color-white: #ffffff;
 $color-salad: #fab95b;
+$color-salad-hover: #fca52d;
 $color-transparent: rgba(0, 0, 0, 0.5);
 $color-transparent-grey: rgba(255, 255, 255, 0.4);
 
@@ -43,6 +45,7 @@ $color-transparent-grey: rgba(255, 255, 255, 0.4);
 %button {
   padding: 0.75rem 1rem;
   font-size: 1.2rem;
+  font-weight: 200;
   background-color: $color-salad;
   border: 1px solid $color-salad;
   color: $color-white;
@@ -60,7 +63,7 @@ $color-transparent-grey: rgba(255, 255, 255, 0.4);
 
   &:hover {
     transition: 0.5s;
-    background-color: transparent;
+    background-color: $color-salad-hover;
   }
 }
 
@@ -161,7 +164,7 @@ body {
       width: 100%;
       background-color: $color-white;
       transition: 0.5s all ease-in-out;
-      top: calc(-186px + 50px);
+      top: calc(-230px + 50px);
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
       &.open {
@@ -252,6 +255,7 @@ body {
 
     button {
       @extend %button;
+      font-weight: 200;
     }
   }
 }
@@ -310,7 +314,6 @@ body {
     @extend %button;
 
     &:hover {
-      color: $color-grey;
     }
 
     &.button-cv {
@@ -318,8 +321,7 @@ body {
       border-color: $color-grey;
 
       &:hover {
-        color: $color-grey;
-        background-color: transparent;
+        background-color: $color-grey-hover;
       }
     }
   }
@@ -332,11 +334,12 @@ body {
     grid-template-columns: 3fr 1fr;
 
     @media (max-width: 1230px) {
-      padding: 2rem 15px;
+      padding: 3rem 15px;
     }
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
+      padding: 2rem 15px;
     }
   }
 
@@ -511,11 +514,6 @@ body {
 }
 
 .slide {
-  // &:hover {
-  //   box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
-  //   transition: 0.3s all ease;
-  // }
-
   &__image {
     position: relative;
     margin-bottom: 10px;
@@ -571,6 +569,7 @@ body {
         height: 70px;
         bottom: 0;
         top: auto;
+        border-radius: 0 0 5px 5px;
       }
 
       ._icon-show {
@@ -582,6 +581,11 @@ body {
         gap: 10px;
         font-size: 40px;
         line-height: 1.2;
+
+        &:hover {
+          background-color: $color-salad-hover;
+          transition: 0.5s;
+        }
 
         @media (max-width: 1230px) {
           font-size: 30px;
@@ -600,6 +604,11 @@ body {
       font-size: 40px;
       line-height: 1.2;
       transform: rotate(0deg) scale(0.1);
+
+      &:hover {
+        background-color: $color-salad-hover;
+        transition: 0.5s;
+      }
 
       @media (max-width: 1230px) {
         font-size: 30px;
@@ -709,10 +718,42 @@ body {
 
   &__button {
     justify-self: left;
-    color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124;
-    border-radius: 30px;
-    padding: 10px 30px;
+    @extend %button;
+    background-color: $color-grey;
+
+    &:hover {
+      background-color: $color-grey-hover;
+    }
+  }
+}
+
+.contacts {
+  @extend %section;
+  &__socials {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+      }
+
+      li {
+        a {
+          width: 60px;
+          height: 60px;
+          border: 2px solid $color-salad;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 22px;
+          color: $color-salad;
+          transition: 0.5s;
+        }
+      }
+    }
   }
 }

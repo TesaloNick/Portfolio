@@ -70,3 +70,55 @@ $('.portfolio__slider').slick({
     }
   ]
 });
+
+//-------------------------Social Links hover
+const socials = document.querySelectorAll('.contacts__socials ul li a')
+socials.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    item.style.color = item.dataset.color
+    item.style.borderColor = item.dataset.color
+  })
+  item.addEventListener('mouseout', () => {
+    item.style.color = '#fab95b'
+    item.style.borderColor = '#fab95b'
+  })
+})
+
+
+//------------------------------scroll-------------------------
+function removeMenu() {
+  burgerWrapper.classList.remove('open')
+  nav.classList.remove('open')
+}
+
+function slowScroll(id) {
+  var offset = 0;
+  if (id === '.about') {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - offset - 50
+    }, 500);
+    removeMenu()
+  } else if (id === '.portfolio') {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - offset - 50
+    }, 500);
+    removeMenu()
+  } else if (id === '.skills') {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - offset - 50
+    }, 500);
+    removeMenu()
+  } else if (id === '.contacts') {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - offset - 50
+    }, 500);
+    removeMenu()
+  } else if (id === '.home') {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+    removeMenu()
+  }
+
+  return false;
+}

@@ -2,12 +2,12 @@
 @import url(./effects/burger-animation.css);
 @import url(./font.css);
 @import url(./effects/Paralax-hover-card-effect.css);
-.form .title, .portfolio .title, .skills .container .title, .about .title {
+.contacts .title, .form .title, .portfolio .title, .skills .container .title, .about .title {
   font-weight: 200;
   font-size: 2rem;
   line-height: 1.2;
 }
-.form .title::before, .portfolio .title::before, .skills .container .title::before, .about .title::before {
+.contacts .title::before, .form .title::before, .portfolio .title::before, .skills .container .title::before, .about .title::before {
   content: "";
   width: 50px;
   height: 2px;
@@ -15,7 +15,7 @@
   display: block;
   margin: 0 0 10px 0;
 }
-.form .title span, .portfolio .title span, .skills .container .title span, .about .title span {
+.contacts .title span, .form .title span, .portfolio .title span, .skills .container .title span, .about .title span {
   font-weight: 800;
 }
 
@@ -31,9 +31,10 @@
   }
 }
 
-.about__button, .home__text button {
+.form__button, .about__button, .home__text button {
   padding: 0.75rem 1rem;
   font-size: 1.2rem;
+  font-weight: 200;
   background-color: #fab95b;
   border: 1px solid #fab95b;
   color: #ffffff;
@@ -42,27 +43,27 @@
   transition: 0.5s;
 }
 @media (max-width: 991px) {
-  .about__button, .home__text button {
+  .form__button, .about__button, .home__text button {
     padding: 0.5rem 0.75rem;
   }
 }
 @media (max-width: 424px) {
-  .about__button, .home__text button {
+  .form__button, .about__button, .home__text button {
     font-size: 1rem;
   }
 }
-.about__button:hover, .home__text button:hover {
+.form__button:hover, .about__button:hover, .home__text button:hover {
   transition: 0.5s;
-  background-color: transparent;
+  background-color: #fca52d;
 }
 
-.form, .portfolio, .skills .container, .about {
+.contacts, .form, .portfolio, .skills .container, .about {
   padding: 3rem 0;
   display: grid;
   gap: 1rem;
 }
 @media (max-width: 767px) {
-  .form, .portfolio, .skills .container, .about {
+  .contacts, .form, .portfolio, .skills .container, .about {
     padding: 1.5rem 0;
   }
 }
@@ -142,7 +143,7 @@ body {
     width: 100%;
     background-color: #ffffff;
     transition: 0.5s all ease-in-out;
-    top: -136px;
+    top: -180px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   }
   .home__nav.open {
@@ -225,6 +226,10 @@ body {
     font-size: 1.5rem;
   }
 }
+.home__text button {
+  font-weight: 200;
+}
+
 .about {
   grid-template-columns: 1fr 2fr;
   align-items: center;
@@ -266,16 +271,12 @@ body {
     gap: 0.3rem;
   }
 }
-.about__button:hover {
-  color: #808080;
-}
 .about__button.button-cv {
   background-color: #808080;
   border-color: #808080;
 }
 .about__button.button-cv:hover {
-  color: #808080;
-  background-color: transparent;
+  background-color: #575757;
 }
 
 .skills {
@@ -286,12 +287,13 @@ body {
 }
 @media (max-width: 1230px) {
   .skills .container {
-    padding: 2rem 15px;
+    padding: 3rem 15px;
   }
 }
 @media (max-width: 767px) {
   .skills .container {
     grid-template-columns: 1fr;
+    padding: 2rem 15px;
   }
 }
 .skills .title {
@@ -480,6 +482,7 @@ body {
     height: 70px;
     bottom: 0;
     top: auto;
+    border-radius: 0 0 5px 5px;
   }
 }
 .slide__image_description ._icon-show {
@@ -491,6 +494,10 @@ body {
   gap: 10px;
   font-size: 40px;
   line-height: 1.2;
+}
+.slide__image_description ._icon-show:hover {
+  background-color: #fca52d;
+  transition: 0.5s;
 }
 @media (max-width: 1230px) {
   .slide__image_description ._icon-show {
@@ -508,6 +515,10 @@ body {
   font-size: 40px;
   line-height: 1.2;
   transform: rotate(0deg) scale(0.1);
+}
+.slide__image_github:hover {
+  background-color: #fca52d;
+  transition: 0.5s;
 }
 @media (max-width: 1230px) {
   .slide__image_github {
@@ -602,9 +613,32 @@ body {
 }
 .form__button {
   justify-self: left;
-  color: #fff;
-  background-color: #23272b;
-  border-color: #1d2124;
-  border-radius: 30px;
-  padding: 10px 30px;
+  background-color: #808080;
+}
+.form__button:hover {
+  background-color: #575757;
+}
+
+.contacts__socials ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 500px) {
+  .contacts__socials ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+.contacts__socials ul li a {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fab95b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #fab95b;
+  transition: 0.5s;
 }

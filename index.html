@@ -30,10 +30,11 @@
       </div>
       <nav class="home__nav">
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">PORTFOLIO</a></li>
-          <li><a href="#">CONTACTS</a></li>
+          <li><a href="javascript://0" onclick="slowScroll ('.home')">HOME</a></li>
+          <li><a href="javascript://0" onclick="slowScroll ('.about')">ABOUT</a></li>
+          <li><a href="javascript://0" onclick="slowScroll ('.skills')">SKILLS</a></li>
+          <li><a href="javascript://0" onclick="slowScroll ('.portfolio')">PORTFOLIO</a></li>
+          <li><a href="javascript://0" onclick="slowScroll ('.contacts')">CONTACTS</a></li>
         </ul>
       </nav>
     </header>
@@ -41,7 +42,7 @@
       <div class="home__text">
         <h1>Hello, I'm<span>Nikolay Antonovich</span></h1>
         <p>FRONTEND DEVELOPER</p>
-        <button>MORE ABOUT ME</button>
+        <button onclick="slowScroll ('.about')">MORE ABOUT ME</button>
       </div>
     </div>
   </section>
@@ -69,8 +70,8 @@
             with your head!</p>
         </div>
         <div class="about__buttons">
-          <a href="" class="about__button button-hire">HIRE ME</a>
-          <a href="https://doc-0k-b8-docs.googleusercontent.com/docs/securesc/9g86jm8q12ilhthdn959gv4f8k35oge0/bnb33eter9e0upmipv0gjck5k0qcjp8f/1669805700000/02587161308846672500/02587161308846672500/1q4viFWXQtPUHoTbAyeIpJl4ZWrR9Hu2h?e=download&ax=AEKYgyQ8Jcm50r7sRtLwRu1RHzxP7QPDCHvlT6a7ViefWhkCeY-H2MkNaoBZooscO77nOOIBbN1e8FU3hTWrDgC_CSIZUiJHAqK8n_d09QQ8xNuPK07mORpRk5wXsBAzaK8Aq60qe7ZrtuGZ5eG0AiiD5w36u3Mp77XvcFn5a1BQ6wMYu1lZFAoLzyQ3WMUjP3abzDF-BRivRaU1Ku5XBysUAnx_3BFaf3GAKH5C2JfgAuMJKnL4JG9GGJjIBzswIca6QK15P6KLvjyqEDNYSnV9ZVZ0bf01PzB0O9Ifd4Jz6PWwarRrPjE115IdMkHH6DiDewBcD2mwC4DrCGBMDs3sn2tOtN9q7ixRa92FIavzHDC3TLoBAWkdP03BMX7Awc1l032w8LYNEFD1iT1I2KiDAs-09-WnVecPm1UxaAwzdo-v1VuJGtTKkM1nydnDe5DqdP460qThsx3D0ZQXMTjMZZKtlr8EWeThs-sf_tijPzEhbjDbCiqLkhQ0agdbPNV2rdbTdj5M0a_LfekQvdwfqCiyBfHmm3TzGofLzlqkpp_JTXbzBc7tLxpEB0V0O4XakdfSys3xeIIO7wZFc0e-oJXeV2Yl5kOwEl6S8Mqe7l_tU12phxFJH1yhxzUHVRaIytoEObDuDi3zTJkYXxCSloqp8FZ25nqwZZFdqPM-o3nHHCPDkTsf-WvzXTrV0LNkV3RbXNH4Ralj58PIHe2YegdoirtLkezS58KIumiMHhcke1cx0mGCBSOVA31NgOe1sQc2E5FVvS8uofKC13oTp8acg6VoXzcfP4pgdC9LFkJxUfO790m80f9gvQ5v4OhF8Job8ueHSiU60iQDTjuLne276A8aDM2bo9q8FVjJEz784m7SKw-vxwpMnjdhGrsVpqeF&uuid=f45ae92f-6f8c-4765-90c7-b21982fad63a&authuser=0&nonce=fp9uqger64mqu&user=02587161308846672500&hash=hffmubt7liverlo0jimu3u9asne2h71c"
+          <a href="javascript://0" onclick="slowScroll ('.contacts')" class="about__button button-hire">HIRE ME</a>
+          <a href="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1eM6-N54lpBXiwDroT-YMnqaDV3fvGtjM"
             download target="_blank" class="about__button button-cv">DOWNLOAD CV</a>
         </div>
       </div>
@@ -200,7 +201,7 @@
         <div class="slide__image">
           <img src="https://github.com/TesaloNick/IPhub-medium/blob/master/img/CoverHome.png?raw=true" alt="CoverHome">
           <div class="slide__image_description">
-            <a href="https://tesalonick.github.io/IPhub-medium/" class="_icon-show" target="_blank"></a>
+            <a href="https://i-phub-medium.vercel.app/" class="_icon-show" target="_blank"></a>
             <a href="https://github.com/TesaloNick/IPhub-medium" class=" slide__image_github" target="_blank">
               <div class="_icon-github"></div>GitHub
             </a>
@@ -247,18 +248,23 @@
       </form>
     </div>
   </section>
-
-  <!-- <div class="contacts">
-    <h2 class="contacts__title">My Contact Details</h2>
-    <div class="contacts__block">
-      <h3>Email</h3>
-      <a href="mailto:TesaloNick@gmail.com">TesaloNick@gmail.com</a>
+  <div class="container">
+    <div class="contacts">
+      <div class="contacts__socials">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/nikolay-antonovich-553b3b215/" class="_icon-linkedin"
+              data-color="#0E76A8" target="_blank"></a></li>
+          <li><a href="https://github.com/TesaloNick" class="_icon-github" data-color="#171515" target="_blank"></a>
+          </li>
+          <li><a href="https://wa.me/375447084805" class="_icon-whatsapp" data-color="#25D366" target="_blank"></a></li>
+          <li><a href="https://t.me/TesaloNick" class="_icon-telegram" data-color="#27A7E7" target="_blank"></a></li>
+          <li><a href="mailto:tesalonick@gmail.com" class="_icon-email" data-color="#EA4335" target="_blank"></a></li>
+          <li><a href="https://viber.click/375447084805" class="_icon-viber" data-color="#7360f2" target="_blank"></a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="contacts__block">
-      <h3>Phone</h3>
-      <a href="tel:375447084805">+375 (44) 708-48-05</a>
-    </div>
-  </div> -->
+  </div>
 
   <script src="./js/jquery-3.6.1.min.js"></script>
   <script type="text/javascript" src="./js/slick-slider/slick.min.js"></script>
