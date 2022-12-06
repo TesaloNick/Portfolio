@@ -70,7 +70,7 @@
             with your head!</p>
         </div>
         <div class="about__buttons">
-          <a href="javascript://0" onclick="slowScroll ('.contacts')" class="about__button button-hire">HIRE ME</a>
+          <a href="javascript://0" onclick="slowScroll ('.form')" class="about__button button-hire">HIRE ME</a>
           <a href="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1eM6-N54lpBXiwDroT-YMnqaDV3fvGtjM"
             download target="_blank" class="about__button button-cv">DOWNLOAD CV</a>
         </div>
@@ -239,11 +239,15 @@
   <section class="form">
     <div class="container">
       <h1 class="title">Wanna <span>Start Work</span> With Me?</h1>
-      <form action="">
-        <input type="text" class="form__input-name" required placeholder="Your name">
-        <input type="email" class="form__input-email" required placeholder="Your email">
-        <input type="text" class="form__input-topic" placeholder="Subject of you message">
-        <textarea name="" id="" cols="20" rows="10" class="form__message" placeholder="Write a message"></textarea>
+      <form action="POST">
+        <input type="hidden" name="project_name" value="Portfoloi">
+        <input type="hidden" name="admin_email" value="TesaloNick@gmail.com">
+        <input type="hidden" name="form_subject" value="Form Subject">
+        <input name="Имя" type="text" class="form__input-name" required placeholder="Your name">
+        <input name="Адрес почты" type="email" class="form__input-email" required placeholder="Your email">
+        <input name="Тема письма" type="text" class="form__input-topic" placeholder="Subject of you message">
+        <textarea name="Тело письма" id="" cols="20" rows="10" class="form__message"
+          placeholder="Write a message"></textarea>
         <button class="form__button">SEND MESSAGE</button>
       </form>
     </div>

@@ -113,6 +113,11 @@ function slowScroll(id) {
       scrollTop: $(id).offset().top - offset - 50
     }, 500);
     removeMenu()
+  } else if (id === '.form') {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - offset - 50
+    }, 500);
+    removeMenu()
   } else if (id === '.home') {
     $('html, body').animate({
       scrollTop: 0
@@ -122,3 +127,25 @@ function slowScroll(id) {
 
   return false;
 }
+
+//------------------------------send email-------------------------
+$(document).ready(function () {
+  //E-mail Ajax Send
+  $(".form form").submit(function () { //Change
+    console.log('1');
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function () {
+      alert("Thank you!");
+      setTimeout(function () {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
+
+});
