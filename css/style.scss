@@ -231,7 +231,7 @@ body {
       font-weight: 200;
       line-height: 1.2;
 
-      @media (max-width: 767px) {
+      @media (max-width: 780px) {
         font-size: 2.8rem;
       }
 
@@ -264,7 +264,7 @@ body {
       color: $color-transparent-grey;
       text-align: center;
 
-      @media (max-width: 767px) {
+      @media (max-width: 780px) {
         font-size: 1.5rem;
       }
     }
@@ -302,7 +302,12 @@ body {
   }
 
   &__image {
-    // background-color: $color-background;
+    img {
+      @media (max-width: 767px) {
+        max-width: 350px;
+        margin: auto;
+      }
+    }
 
     @media (max-width: 767px) {
       margin: 0 1.25rem;
@@ -340,9 +345,6 @@ body {
 
   &__button {
     @extend %button;
-
-    &:hover {
-    }
 
     &.button-cv {
       background-color: $color-grey;
@@ -521,11 +523,6 @@ body {
 
       &.prev {
         left: 10px;
-
-        ._icon-arrow {
-          &::before {
-          }
-        }
       }
 
       &.next {
@@ -533,8 +530,6 @@ body {
 
         ._icon-arrow {
           transform: rotate(180deg);
-          &::before {
-          }
         }
       }
     }
@@ -641,9 +636,6 @@ body {
       @media (max-width: 1230px) {
         font-size: 30px;
       }
-
-      ._icon-github {
-      }
     }
   }
 
@@ -720,12 +712,6 @@ body {
     }
   }
 
-  &__input-name {
-  }
-
-  &__input-email {
-  }
-
   &__input-topic {
     grid-column: 1/3;
 
@@ -772,14 +758,19 @@ body {
         a {
           width: 60px;
           height: 60px;
-          border: 2px solid $color-salad;
           border-radius: 50%;
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 22px;
-          color: $color-salad;
+          font-size: 30px;
           transition: 0.5s;
+
+          @media (min-width: 991px) {
+            &.active {
+              border: 3px solid $color-salad !important;
+              color: $color-salad !important;
+            }
+          }
         }
       }
     }

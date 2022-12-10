@@ -74,11 +74,11 @@ const socials = document.querySelectorAll('.contacts__socials ul li a')
 socials.forEach(item => {
   item.addEventListener('mouseover', () => {
     item.style.color = item.dataset.color
-    item.style.borderColor = item.dataset.color
+    item.style.border = `3px solid ${item.dataset.color}`
+    item.classList.remove('active')
   })
   item.addEventListener('mouseout', () => {
-    item.style.color = '#fab95b'
-    item.style.borderColor = '#fab95b'
+    item.classList.add('active')
   })
 })
 
