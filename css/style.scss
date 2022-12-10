@@ -231,7 +231,7 @@ body {
       font-weight: 200;
       line-height: 1.2;
 
-      @media (max-width: 676px) {
+      @media (max-width: 767px) {
         font-size: 2.8rem;
       }
 
@@ -264,7 +264,7 @@ body {
       color: $color-transparent-grey;
       text-align: center;
 
-      @media (max-width: 676px) {
+      @media (max-width: 767px) {
         font-size: 1.5rem;
       }
     }
