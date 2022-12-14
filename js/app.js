@@ -72,14 +72,19 @@ $('.portfolio__slider').slick({
 //-------------------------Social Links hover
 const socials = document.querySelectorAll('.contacts__socials ul li a')
 socials.forEach(item => {
-  item.addEventListener('mouseover', () => {
-    item.style.color = item.dataset.color
-    item.style.border = `3px solid ${item.dataset.color}`
-    item.classList.remove('active')
-  })
-  item.addEventListener('mouseout', () => {
-    item.classList.add('active')
-  })
+  item.style.color = item.dataset.color
+  item.style.border = `3px solid ${item.dataset.color}`
+
+  if (item.classList.contains('active')) {
+    item.addEventListener('mouseover', () => {
+      item.classList.remove('active')
+      item.style.color = item.dataset.color
+      item.style.border = `3px solid ${item.dataset.color}`
+    })
+    item.addEventListener('mouseout', () => {
+      item.classList.add('active')
+    })
+  }
 })
 
 
