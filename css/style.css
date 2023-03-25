@@ -11,7 +11,7 @@
   content: "";
   width: 50px;
   height: 2px;
-  background-color: #fab95b;
+  background-color: #8d4b55;
   display: block;
   margin: 0 0 10px 0;
 }
@@ -35,8 +35,8 @@
   padding: 0.75rem 1rem;
   font-size: 1.2rem;
   font-weight: 200;
-  background-color: #fab95b;
-  border: 1px solid #fab95b;
+  background-color: #8d4b55;
+  border: 1px solid #8d4b55;
   color: #ffffff;
   letter-spacing: 0.2rem;
   border-radius: 1.6rem;
@@ -54,7 +54,7 @@
 }
 .form__button:hover, .about__button:hover, .home__text button:hover {
   transition: 0.5s;
-  background-color: #fca52d;
+  background-color: #902c3b;
 }
 
 .contacts, .form, .portfolio, .skills .container, .about {
@@ -172,7 +172,7 @@ body {
   transition: 0.3s;
 }
 .home__nav ul li a:hover {
-  color: #fab95b;
+  color: #8d4b55;
   transition: 0.3s;
 }
 @media (max-width: 991px) {
@@ -219,8 +219,7 @@ body {
   display: block;
   font-weight: 800;
   width: 18ch;
-  -webkit-animation: typing 3s steps(18), blink 0.5s step-end infinite alternate;
-          animation: typing 3s steps(18), blink 0.5s step-end infinite alternate;
+  animation: typing 3s steps(18), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -247,20 +246,9 @@ body {
   font-weight: 200;
 }
 
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
 @keyframes typing {
   from {
     width: 0;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
   }
 }
 @keyframes blink {
@@ -324,7 +312,7 @@ body {
 }
 
 .skills {
-  background-color: #fab95b;
+  background-color: #8d4b55;
 }
 .skills .container {
   grid-template-columns: 3fr 1fr;
@@ -400,7 +388,7 @@ body {
   border-radius: 3px;
   transform: translateX(-50%);
   background-color: #ffffff;
-  color: #fab95b;
+  color: #8d4b55;
   font-size: 0.6rem;
   display: flex;
   justify-content: center;
@@ -535,13 +523,13 @@ body {
   color: #ffffff;
   padding: 5px 15px;
   border-radius: 5px;
-  background-color: #fab95b;
+  background-color: #8d4b55;
   gap: 10px;
   font-size: 40px;
   line-height: 1.2;
 }
 .slide__image_description ._icon-show:hover {
-  background-color: #fca52d;
+  background-color: #902c3b;
   transition: 0.5s;
 }
 @media (max-width: 1230px) {
@@ -555,14 +543,14 @@ body {
   color: #ffffff;
   padding: 5px 15px;
   border-radius: 5px;
-  background-color: #fab95b;
+  background-color: #8d4b55;
   gap: 10px;
   font-size: 40px;
   line-height: 1.2;
   transform: rotate(0deg) scale(0.1);
 }
 .slide__image_github:hover {
-  background-color: #fca52d;
+  background-color: #902c3b;
   transition: 0.5s;
 }
 @media (max-width: 1230px) {
@@ -593,7 +581,7 @@ body {
 }
 
 .form {
-  background-color: #fab95b;
+  background-color: #8d4b55;
 }
 .form .container {
   width: 100%;
@@ -617,7 +605,7 @@ body {
 }
 .form input,
 .form textarea {
-  background-color: #fab95b;
+  background-color: #8d4b55;
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   color: rgb(255, 255, 255);
   caret-color: rgba(255, 255, 255, 0.5);
@@ -625,9 +613,6 @@ body {
   padding: 6px 12px;
 }
 .form input::-moz-placeholder, .form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 .form input::placeholder,
@@ -687,7 +672,7 @@ body {
 }
 @media (min-width: 991px) {
   .contacts__socials ul li a.active {
-    border: 3px solid #fab95b !important;
-    color: #fab95b !important;
+    border: 3px solid #8d4b55 !important;
+    color: #8d4b55 !important;
   }
 }
